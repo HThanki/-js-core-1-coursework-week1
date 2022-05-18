@@ -13,7 +13,7 @@
   and have different levels of positivity or negativity.
 
   Below are the possible answers:
-
+  
   ## Very positive
     It is certain.
     It is decidedly so.
@@ -47,19 +47,49 @@
 // and return the answer.
 function shakeBall() {
   //Write your code in here
-  console.log("The ball has shaken!");
+  let answer = Math.round(Math.random() * 20);
 
-  const answersArr = [
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes - definitely.",
-    "You may rely on it.",
-  ];
-
-  let answerNum = Math.floor(Math.random() * 4);
-  let answer = answersArr[answerNum];
-  return answer;
+  if (answer == 0) {
+    return `The ball has shaken! It is certain.`;
+  } else if (answer == 1) {
+    return `The ball has shaken! It is decidedly so.`;
+  } else if (answer == 2) {
+    return `The ball has shaken! Without a doubt.`;
+  } else if (answer == 3) {
+    return `The ball has shaken! Yes - definitely.`;
+  } else if (answer == 4) {
+    return `The ball has shaken! You may rely on it.`;
+  } else if (answer == 5) {
+    return `The ball has shaken! As I see it, yes.`;
+  } else if (answer == 6) {
+    return `The ball has shaken! Most likely.`;
+  } else if (answer == 7) {
+    return `The ball has shaken! Outlook good.`;
+  } else if (answer == 8) {
+    return `The ball has shaken! Yes.`;
+  } else if (answer == 9) {
+    return `The ball has shaken! Signs point to yes.`;
+  } else if (answer == 10) {
+    return `The ball has shaken! Reply hazy, try again.`;
+  } else if (answer == 11) {
+    return `The ball has shaken! Ask again later.`;
+  } else if (answer == 12) {
+    return `The ball has shaken! Better not tell you now.`;
+  } else if (answer == 13) {
+    return `The ball has shaken! Cannot predict now.`;
+  } else if (answer == 14) {
+    return `The ball has shaken! Concentrate and ask again.`;
+  } else if (answer == 15) {
+    return `The ball has shaken! Don't count on it.`;
+  } else if (answer == 16) {
+    return `The ball has shaken! My reply is no.`;
+  } else if (answer == 17) {
+    return `The ball has shaken! My sources say no.`;
+  } else if (answer == 18) {
+    return `The ball has shaken! Outlook not so good.`;
+  } else if (answer == 19) {
+    return `The ball has shaken! Very doubtful.`;
+  }
 }
 
 /* 
@@ -73,6 +103,10 @@ function shakeBall() {
 */
 function checkAnswer(answer) {
   //Write your code in here
+
+  if (answer <= 4) {
+    return `Very Positive`;
+  }
 }
 
 /* 
